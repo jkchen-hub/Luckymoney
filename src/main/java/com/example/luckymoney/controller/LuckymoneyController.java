@@ -92,6 +92,7 @@ public class LuckymoneyController {
 		Optional<Luckymoney> optional = repository.findById(id);//先根据id查找Luckymoney对象
 		if (optional.isPresent()) {//判断是否查找到
 			repository.delete(optional.get());//找到了就删除
+//			repository.deleteById(id);
 			return "成功";
 		}
 		else {
